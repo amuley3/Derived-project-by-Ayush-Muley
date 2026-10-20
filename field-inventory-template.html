@@ -30,7 +30,10 @@
         </head>
         <body>
             <h1>F2 · Task and Data Plan</h1>
-            <p>Duplicate rows as needed. Justify every collected value.</p>
+            <p>
+                This table explains the fields used in my Community Car Meet Registration form. It shows why each value is needed, 
+                whether it is required, and how the information would be used.
+            </p>
             <table>
                 <thead>
                     <tr>
@@ -46,14 +49,112 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Example only</td>
-                        <td>Replace</td>
-                        <td>Yes/No</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace or N/A</td>
-                        <td>Replace or none</td>
-                        <td>Replace</td>
+                        <td>Name</td>
+                        <td>Identifies the attendee in a real event.</td>
+                        <td>Yes</td>
+                        <td>Text input</td>
+                        <td>name: attendee's name</td>
+                        <td>autocomplete="name"</td>
+                        <td>Cannot be blank.</td>
+                        <td>Personal information. Use fictional data only.</td>
+                    </tr>
+                    <tr>
+                        <td>Email Address</td>
+                        <td>Could be used to contact the attendee about the event.</td>
+                        <td>Yes</td>
+                        <td>Email input</td>
+                        <td>email: entered email</td>
+                        <td>autocomplete="email"</td>
+                        <td>Required; browser checks basic email format.</td>
+                        <td>Personal information. Use a fictional email address.</td>
+                    </tr>
+
+                    <tr>
+                        <td>How will you attend?</td>
+                        <td>Helps the organizer understand whether the person is visiting or displaying a car.</td>
+                        <td>Yes</td>
+                        <td>Select menu</td>
+                        <td>attendance: visitor, display, or both</td>
+                        <td>Not needed</td>
+                        <td>The user must choose an option.</td>
+                        <td>Low sensitivity. Used for event planning.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Car Make</td>
+                        <td>Identifies the make of the car that may be displayed.</td>
+                        <td>No</td>
+                        <td>Text input</td>
+                        <td>car_make: entered car make</td>
+                        <td>Not needed</td>
+                        <td>Optional text field.</td>
+                        <td>Low sensitivity. Vehicle information only.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Car Model</td>
+                        <td>Provides more information about the displayed car.</td>
+                        <td>No</td>
+                        <td>Text input</td>
+                        <td>car_model: entered car model</td>
+                        <td>Not needed</td>
+                        <td>Optional text field.</td>
+                        <td>Low sensitivity. Vehicle information only.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Car Year</td>
+                        <td>Shows the year the car was made.</td>
+                        <td>No</td>
+                        <td>Number input</td>
+                        <td>car_year: entered year</td>
+                        <td>Not needed</td>
+                        <td>Minimum 1900 and maximum 2027.</td>
+                        <td>Low sensitivity. A vehicle year does not require a registration plate or VIN.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Would you like to display your car? - Yes</td>
+                        <td>Records that the attendee wants to display a car.</td>
+                        <td>No</td>
+                        <td>Radio button</td>
+                        <td>display_car: yes</td>
+                        <td>Not needed</td>
+                        <td>Shares the display_car name with the No option.</td>
+                        <td>Low sensitivity. Event preference.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Would you like to display your car? - No</td>
+                        <td>Records that the attendee does not want to display a car.</td>
+                        <td>No</td>
+                        <td>Radio button</td>
+                        <td>display_car: no</td>
+                        <td>Not needed</td>
+                        <td>Shares the display_car name with the Yes option.</td>
+                        <td>Low sensitivity. Event preference.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Tell us about your car</td>
+                        <td>Lets the attendee provide a short description of the vehicle.</td>
+                        <td>No</td>
+                        <td>Textarea</td>
+                        <td>car_notes: entered description</td>
+                        <td>Not needed</td>
+                        <td>Maximum 250 characters.</td>
+                        <td>Optional text. Users should not include private information.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Interested in future car events?</td>
+                        <td>Shows whether the attendee is interested in future events.</td>
+                        <td>No</td>
+                        <td>Checkbox</td>
+                        <td>future_events: yes when checked</td>
+                        <td>Not needed</td>
+                        <td>Optional. An unchecked checkbox is not submitted.</td>
+                        <td>Low sensitivity. Optional event preference.</td>
                     </tr>
                 </tbody>
             </table>
