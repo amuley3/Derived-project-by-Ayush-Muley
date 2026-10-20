@@ -43,30 +43,60 @@
             <form action="" method="get">
                 <fieldset>
                     <legend>F3 · Contact information</legend>
-                    <p class="help">Replace or extend this group based on your justified field inventory.</p>
+                    <p class="help">Fill in the required information to register your interest in the Community Car Meet.</p>
                     <div class="field">
-                        <label for="name">Name</label>
-                        <input id="name" name="name" type="text" autocomplete="name">
+                        <label for="name">Name (required)</label>
+                        <input id="name" name="name" type="text" autocomplete="name" required>
                     </div>
                     <div class="field">
                         <label for="email">Email address (required)</label>
                         <input id="email" name="email" type="email" autocomplete="email" required>
                     </div>
+
+                    <div class="field">
+                        <label for="attendance">How will you attend? (Required)</label>
+                        <select id="attendance" name="attendance" required>
+                            <option value="">Choose an option</option>
+                            <option value="visitor">As a visitor</option>
+                            <option value="display">Displaying my car</option>
+                            <option value="both">Both</option>
+                        </select>
+                    </div>
                 </fieldset>
                 <fieldset>
-                    <legend>F3 · Request choices</legend>
-                    <p class="help">Use an appropriate radio, checkbox, or select structure for the task.</p>
+                    <legend>F3 · Car Information</legend>
+                    <p class="help">These fields are optional if you are not displaying a car.</p>
                     <label class="choice">
-                        <input type="radio" name="request_type" value="option-a"> Replace with option A</label>
-                        <label class="choice"><input type="radio" name="request_type" value="option-b"> Replace with option B</label>
-                    </fieldset>
+                        <input type="radio" name="display_car" value="yes"> Yes, I want to display my car.</label>
+                        <label class="choice"><input type="radio" name="display_car" value="no"> No, I am just attending.</label>
+                </fieldset>
                     <div class="field">
-                        <label for="details">Request details</label>
-                        <p class="help" id="details-help">Explain the expected content and any limit before entry.</p>
-                        <textarea id="details" name="details" aria-describedby="details-help"></textarea>
+                        <label for="car-make">Car Make (optional)</label>
+                        <input id="car_make" name="car_make" type="text">
                     </div>
-                    <button type="submit">Replace with a specific action</button>
-                </form>
+                    <div class="field">
+                        <label for="car-model">Car Model (optional)</label>
+                        <input id="car_model" name="car_model" type="text">
+                    </div>
+                    <div class="field">
+                        <label for="car-year">Car Year (optional)</label>
+                        <input id="car_year" name="car_year" type="number" min="1900" max="2027">
+                        <p class="help">Enter a year from 1900 to 2027.</p>
+                    </div>
+
+                    <div class="field">
+                        <label for="car-notes">Tell us about your car (Optional)</label>
+                        <textarea id="car_notes" name="car_notes" rows="4" maxlength="250" aria-describedby="car-notes-help"></textarea>
+                        <p class="help" id="car-notes-help">
+                        Maximum 250 characters. Do not include private information.
+                        </p>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Submit Registration</button>
+
+            </form>
+                
                 <section id="states">
                     <h2>F5 · State and Recovery Specimen</h2>
                     <p>Document default, focus, required, valid, invalid, disabled, and a static server-returned error. Keep this section separate from the primary blank form when necessary to avoid misleading users.</p>
