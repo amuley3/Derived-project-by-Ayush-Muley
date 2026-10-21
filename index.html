@@ -7,9 +7,13 @@
     </head>
     <body>
         <header class="page-header">
-            <p class="eyebrow">Application, Registration, or Request</p>
-            <h1>Replace with a specific task title</h1>
-            <p class="lede">Explain who this form is for, what it accomplishes, how long it takes, and what happens after submission.</p>
+            <p class="eyebrow">Community Event Registration</p>
+            <h1>Community Car Meet Registration</h1>
+            <p class="lede">
+                This form is for people who want to attend the Community Car Meet.It lets you register your interest, choose how you will
+                attend, and share information about your car if you want to display it. The form takes about 3 minutes to complete. 
+                After submission, an event organizer would review your registration and provide more information about the event.
+            </p>
         </header>
         <main>
             <section class="card"id="expectations">
@@ -27,8 +31,10 @@
                     <li>The form takes about 3 minutes to complete.</li>
                     <li>Fields marked Required must be completed.</li>
                     <li>Fields without Required are optional.</li>
-                    <li>In this form was real, the organizer would review your registration and provide more event information.</li>
+                    <li>If this form was real, the organizer would review your registration and provide more event information.</li>
                 </ul>
+
+                <p class="help">If you make a mistake, follow the browser's error message, correct the field, and try again.</p>
 
                 <div class="notice">
                     <h3>Privacy Notice</h3>
@@ -44,13 +50,19 @@
                 <fieldset>
                     <legend>F3 · Contact information</legend>
                     <p class="help">Fill in the required information to register your interest in the Community Car Meet.</p>
+                    <ul>
+                        <li>Enter your name, a valid email address, and choose how you will attend.</li>
+                        <li>If you provide a car year, enter a whole number between 1900 and 2027.</li>
+                    </ul>
                     <div class="field">
                         <label for="name">Name (required)</label>
                         <input id="name" name="name" type="text" autocomplete="name" required>
+                        <p class="help">Example: Sam Jason</p>
                     </div>
                     <div class="field">
                         <label for="email">Email address (required)</label>
                         <input id="email" name="email" type="email" autocomplete="email" required>
+                        <p class="help">Example: sam.jason@example.com</p>
                     </div>
 
                     <div class="field">
@@ -69,23 +81,25 @@
                     <label class="choice">
                         <input type="radio" name="display_car" value="yes"> Yes, I want to display my car.</label>
                         <label class="choice"><input type="radio" name="display_car" value="no"> No, I am just attending.</label>
-                </fieldset>
                     <div class="field">
-                        <label for="car-make">Car Make (optional)</label>
+                        <label for="car_make">Car Make (optional)</label>
                         <input id="car_make" name="car_make" type="text">
+                        <p class="help">Example: Kia</p>
+
                     </div>
                     <div class="field">
-                        <label for="car-model">Car Model (optional)</label>
+                        <label for="car_model">Car Model (optional)</label>
                         <input id="car_model" name="car_model" type="text">
+                        <p class="help">Example: Stinger</p>
                     </div>
                     <div class="field">
-                        <label for="car-year">Car Year (optional)</label>
-                        <input id="car_year" name="car_year" type="number" min="1900" max="2027">
-                        <p class="help">Enter a year from 1900 to 2027.</p>
+                        <label for="car_year">Car Year (optional)</label>
+                        <input id="car_year" name="car_year" type="number" min="1900" max="2027" step="1">
+                        <p class="help">Example: 2020</p>
                     </div>
 
                     <div class="field">
-                        <label for="car-notes">Tell us about your car (Optional)</label>
+                        <label for="car_notes">Tell us about your car (Optional)</label>
                         <textarea id="car_notes" name="car_notes" rows="4" maxlength="250" aria-describedby="car-notes-help"></textarea>
                         <p class="help" id="car-notes-help">
                         Maximum 250 characters. Do not include private information.
