@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Inclusive Form Flow</title><link rel="stylesheet" href="styles.css">
+        <title>Inclusive Form Flow</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <header class="page-header">
@@ -16,7 +17,7 @@
             </p>
         </header>
         <main>
-            <section class="card"id="expectations">
+            <section class="card" id="expectations">
                 <p class="label">F1 · Purpose and Expectations</p>
                 <h2>Welcome to the Community Car Meet</h2>
                 
@@ -132,7 +133,7 @@
                         <label for="focus-example">Car Make</label>
                         <input id="focus-example" type="text"
                                value="Kia">
-                        <p class="help"> Press Tab to move between fields.The selected field should have a visible outline.</p>
+                        <p class="help"> Press Tab to move between fields. The selected field should have a visible outline.</p>
                     </div>
 
                     <h3>3. Required State</h3>
@@ -152,9 +153,9 @@
                     <h3>5. Invalid State</h3>
                     <div class="field field-error">
                         <label for="invalid-example">Email address</label>
-                        <input id="invalid-example" type="email" value="sam.example" aria-invalid="true" aria-describedby="invalid-message">
+                        <input id="invalid-example" type="email" value="sam.example" aria-invalid="true" aria-describedby="invalid-message invalid-recovery">
                         <p class="error-text" id="invalid-message"> Error: Enter a complete email address,such as sam.jason@example.com.</p>
-                        <p class="help">To fix this error, enter the missing @ symbol and the rest of the email address.</p>
+                        <p class="help" id="invalid-recovery">To fix this error, enter the missing @ symbol and the rest of the email address.</p>
                     </div>
 
                     <h3>6. Disabled State</h3>
