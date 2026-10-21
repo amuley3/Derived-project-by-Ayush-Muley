@@ -10,7 +10,7 @@
             <p class="eyebrow">Community Event Registration</p>
             <h1>Community Car Meet Registration</h1>
             <p class="lede">
-                This form is for people who want to attend the Community Car Meet.It lets you register your interest, choose how you will
+                This form is for people who want to attend the Community Car Meet. It lets you register your interest, choose how you will
                 attend, and share information about your car if you want to display it. The form takes about 3 minutes to complete. 
                 After submission, an event organizer would review your registration and provide more information about the event.
             </p>
@@ -78,6 +78,7 @@
                 <fieldset>
                     <legend>F3 · Car Information</legend>
                     <p class="help">These fields are optional if you are not displaying a car.</p>
+                    <p><strong>Would you like to display a car? (Optional)</strong></p>
                     <label class="choice">
                         <input type="radio" name="display_car" value="yes"> Yes, I want to display my car.</label>
                         <label class="choice"><input type="radio" name="display_car" value="no"> No, I am just attending.</label>
@@ -122,7 +123,7 @@
                     <h3>1. Default State</h3>
                     <div class="field">
                         <label for="default-example">Car Model (optional)</label>
-                        <input id="default-example" type="text"placeholder="Example: Stinger">
+                        <input id="default-example" type="text" placeholder="Example: Stinger">
                         <p class="help">This field is empty and ready for input.</p>
                     </div>
 
@@ -137,7 +138,7 @@
                     <h3>3. Required State</h3>
                     <div class="field">
                         <label for="required-example">Name (required)</label>
-                        <input id="required-example" type="text"required>
+                        <input id="required-example" type="text" required>
                         <p class="help">This field must be completed before submitting.</p>
                     </div>
 
@@ -166,16 +167,16 @@
                     <h3>7. Static Server-Returned Error</h3>
                     <div class="error-summary">
                         <h3>There is a problem with the fictional submission</h3>
-                        <p><a href="#error-example">Email address needs attention</a></p>
+                        <p><a href="#server-email">Email address needs attention</a></p>
                     </div>
 
                     <div class="field field-error">
                         <label for="server-email">Email address</label>
-                        <input id="server-email" type="email"value="sam.example" aria-invalid="true" aria-describedby="server-error-message">
-                        <p id="error-message"><strong>Error:</strong> Enter an address in the format name@example.com.</p>
+                        <input id="server-email" type="email" value="sam.example" aria-invalid="true" aria-describedby="server-error-message server-error-help">
+                        <p class="error-text" id="server-error-message"> Error: Enter an email address in the format name@example.com.</p>
+                        <p class="help" id="server-error-help"> Recovery: Correct the email address and try again.</p>
                     </div>
                     <button type="button" disabled>Disabled example</button>
-                    <p class="help">Recovery: Correct the email address and try again. The other fictional entries are shown as preserved.</p>
 
                 </section>
                 <section id="documentation">
