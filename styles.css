@@ -131,11 +131,6 @@ button:disabled{
     border-radius: var(--radius);
 }
 
-.label {
-    color: var(--color-pop-out);
-    font-weight: 700;
-}
-
 .notice {
     margin-top: var(--large-spacing);
     padding: var(--medium-spacing);
@@ -154,14 +149,6 @@ h2,
 h3 {
     font-family: var(--font-display);
     line-height: 1.2;
-}
-
-@media (min-width:48rem){
-    .paired-fields{
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:1rem;
-    }
 }
 
 @media (max-width: 600px) {
